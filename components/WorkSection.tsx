@@ -38,7 +38,7 @@ const WorkSection = () => {
 
 const WorkCard = ({ work }: WorkCardProps) => {
   return (
-    <div className="flex relative border-b border-[#8f8f8f]/10 py-4 px-4 max-sm:px-0 rounded-lg cursor-pointer items-center gap-6 hover:bg-[#EDEDED]/30 hover:border-[#EDEDED]/30">
+    <div className="flex relative border-b border-[#8f8f8f]/10 py-4 px-4 max-sm:px-0 rounded-lg cursor-pointer items-center gap-6 sm:hover:bg-[#EDEDED]/30 sm:hover:border-[#EDEDED]/30">
       <BrandIcon />
       <div className="">
         <h1 className="antialiased text-base">{work.company}</h1>
