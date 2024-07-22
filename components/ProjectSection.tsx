@@ -16,7 +16,7 @@ const projectData = [
   {
     id: 1,
     name: "Mask",
-    description: "Anonymous platform for college students",
+    description: "Anonymous platform",
     tag: "web",
     tagProp: "bg-[#DDFECE] text-[#3A7D44]",
   },
@@ -26,6 +26,13 @@ const projectData = [
     description: "A youtube notes generator app.",
     tag: "ai",
     tagProp: "bg-[#EAF7FE] text-[#1d4ed8]",
+  },
+  {
+    id: 2,
+    name: "Prodec",
+    description: "Linear integration",
+    tag: "ongoing",
+    tagProp: "bg-[#FEF3DC] text-[#6B4006]",
   },
 ];
 
@@ -41,16 +48,16 @@ const ProjectSection = () => {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="flex relative antialiased border-b border-[#8f8f8f]/10 py-4 px-4 rounded-lg cursor-pointer items-center gap-6 hover:bg-[#EDEDED]/30 hover:border-[#EDEDED]/30">
+    <div className="flex relative antialiased border-b border-[#8f8f8f]/10 py-4 px-4 max-sm:px-0 rounded-lg cursor-pointer items-center gap-6 hover:bg-[#EDEDED]/30 hover:border-[#EDEDED]/30">
       <BrandIcon />
       <div className="">
-        <h1 className="antialiased">{project.name}</h1>
+        <h1 className="antialiased text-base">{project.name}</h1>
         <p className="text-sm text-[#8F8F8F] antialiased">
           {project.description}
         </p>
       </div>
       <span
-        className={`absolute bottom-4 antialiased right-6 text-sm  ${project.tagProp}  px-3 rounded-full`}
+        className={`absolute bottom-4 max-sm:hidden antialiased right-6 text-sm  ${project.tagProp}  px-3 rounded-full`}
       >
         {project.tag}
       </span>
